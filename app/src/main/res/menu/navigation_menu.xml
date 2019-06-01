@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/account"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Mi cuenta"/>
+    <item android:id="@+id/give_in_adoption"
+        android:icon="@drawable/ic_label_outline_black_24dp"
+        android:title="Dar en adopcion"/>
+    <item android:id="@+id/in_adoption"
+        android:icon="@drawable/ic_label_outline_black_24dp"
+        android:title="En adopción"/>
+
+    <item android:id="@+id/recomended"
+        android:icon="@drawable/ic_label_outline_black_24dp"
+        android:title="Recomendaciones"/>
+
+
+
+
+
+
+</menu>

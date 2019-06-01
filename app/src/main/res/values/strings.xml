@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PETit</string>
+    <string name="Close">Close</string>
+    <string name="Open">Open</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="veterinarias">Veterinarias</string>
+    <string name="veterinarias_en_esta_zona">Veterinarias en esta zona</string>
+    <string name="capitanio">Capitanio</string>
+    <string name="en_adopcion_item">En adopción</string>
+    <string name="pet_age">Años</string>
+
+
+</resources>

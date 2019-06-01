@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetdetailActivity"
+    android:id="@+id/container">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/detail_Collpasing_Toolbar_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/screen_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="32dp"
+                    app:tabBackground="@drawable/indicator_selector"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true">
+                </android.support.design.widget.TabLayout>
+
+            </RelativeLayout>
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleTextColor="@android:color/white"
+                app:layout_collapseMode="pin"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+            <LinearLayout
+                android:id="@+id/firstContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp"
+                    >
+
+                    <Button
+                        android:id="@+id/adopt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/stylebutton"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:stateListAnimator="@null"
+                        android:text="Adoptar"
+                        android:textColor="#ffffff"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:layout_weight="2"/>
+
+                    <ImageView
+                        android:id="@+id/add_to_favorites"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_bookmark_border_blue_24dp"
+                        android:layout_weight="9"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/text_verify"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="En adopción"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                    <Switch
+                        android:id="@+id/on_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:checked="true"
+                        android:visibility="gone"/>
+
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="380dp"
+                    android:layout_height="1dp"
+                    android:background="#bdbdbd"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_current_owner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp"
+                        android:text="Mis datos"
+                        android:padding="16dp"
+                        android:textAlignment="center"/>
+
+                    <View
+                        android:layout_width="380dp"
+                        android:layout_height="1dp"
+                        android:background="#bdbdbd"
+                        android:layout_gravity="center"/>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="16dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#95a5a6"
+                            android:textSize="16sp"
+                            android:text="Edad"
+                            android:padding="4dp"
+                            android:layout_weight="1"
+                            android:textAlignment="center"/>
+                        <TextView
+                            android:id="@+id/weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#95a5a6"
+                            android:textSize="16sp"
+                            android:text="18Kg"
+                            android:padding="4dp"
+                            android:layout_weight="1"
+                            android:textAlignment="center"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="380dp"
+                    android:layout_height="1dp"
+                    android:background="#bdbdbd"
+                    android:layout_gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Vacunado"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/vaccinated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Si"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Desparacitado"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/dewormed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="No"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Sano"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/healthy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Si"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="Esterilizado"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:id="@+id/sterilized"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#95a5a6"
+                        android:textSize="16sp"
+                        android:text="No"
+                        android:padding="4dp"
+                        android:layout_weight="1"
+                        android:textAlignment="center"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="380dp"
+                    android:layout_height="1dp"
+                    android:background="#bdbdbd"
+                    android:layout_gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/descriptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textColor="#444444"
+                    android:textSize="14sp"
+                    android:text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet "
+                    android:padding="4dp"
+                    android:layout_weight="1"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

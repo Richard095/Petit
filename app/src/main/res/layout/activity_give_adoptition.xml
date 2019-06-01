@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".GiveAdoptitionActivity"
+    android:id="@+id/activityId">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos de la mascota"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorPrimary"/>
+    
+    <View style="@style/Divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/pet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/style_spinner"
+            android:hint="Nombre"
+            android:padding="4dp"
+            android:textColorHint="#555"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/style_spinner">
+                <Spinner
+                    android:id="@+id/spinner_specie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    />
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/pet_weigth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/style_spinner"
+            android:hint="Edad"
+            android:padding="4dp"
+            android:textColorHint="#555"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/style_spinner">
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View style="@style/Divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    android:background="@drawable/style_spinner"
+    android:layout_marginLeft="18dp"
+    android:layout_marginRight="18dp">
+    <CheckBox
+        android:id="@+id/checkbox_status1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:checked="false"
+        android:text="Vacunado"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_weight="1"/>
+    <CheckBox
+        android:id="@+id/checkbox_status2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:checked="false"
+        android:text="Desparacitado"
+        android:buttonTint="@color/colorPrimary"
+        android:layout_weight="1" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/style_spinner"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="16dp">
+        <CheckBox
+            android:id="@+id/checkbox_status_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:checked="false"
+            android:text="Sano   "
+            android:buttonTint="@color/colorPrimary"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/checkbox_status4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:checked="false"
+            android:text="Esterilizado"
+            android:buttonTint="@color/colorPrimary"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <View style="@style/Divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"/>
+    <EditText
+        android:id="@+id/pet_description"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:maxHeight="80dp"
+        android:background="@drawable/style_spinner"
+        android:layout_margin="18dp"
+        android:textColor="#555"
+        android:textSize="12sp"
+        android:textAlignment="inherit"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:gravity="start"
+        android:padding="4dp"/>
+
+
+
+        <ImageButton
+            android:id="@+id/upload_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_file_upload_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/images_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="4dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Cancelar"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/send_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/stylebutton"
+        android:clickable="true"
+        android:focusable="true"
+        android:stateListAnimator="@null"
+        android:text="Dar en adopción"
+        android:textColor="#ffffff"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+</RelativeLayout>

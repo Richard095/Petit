@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".SavedsActivity">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/saveds_activity_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#3f51b3"
+    android:elevation="4dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:titleTextColor="#ffffff"
+    app:title="Guardados"/>
+
+    <TextView
+        android:id="@+id/message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Nada aún"
+        android:textAlignment="center"
+        android:visibility="visible"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/show_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_sentiment_dissatisfied_black_24dp"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+<android.support.v7.widget.RecyclerView
+
+    android:id="@+id/pets_saveds_recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+</android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>
